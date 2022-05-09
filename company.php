@@ -16,35 +16,35 @@
       <div class="container">
         <div class="row d-flex">
 
-            <?php 
-                  $sql = "SELECT * FROM `tblcompany`";
-                  $mydb->setQuery($sql);
-                  $comp = $mydb->loadResultList(); 
+          <?php
+          $sql = "SELECT * FROM `tblcompany`";
+          $mydb->setQuery($sql);
+          $comp = $mydb->loadResultList();
 
-                  foreach ($comp as $company ) { 
-            ?>
+          foreach ($comp as $company) {
+          ?>
 
-          <div class="col-md-3 d-flex ftco-animate">
-            <div class="blog-entry align-self-stretch"> 
-              <a href="<?php echo web_root.'index.php?q=hiring&search='.$company->COMPANYNAME; ?>" class="block-20" style="background-image: url('https://pngriver.com/wp-content/uploads/2017/11/city-buildings-png-transparent-images-clipart-icons-pngriver-download-free-skyscraper-clipart-transparent-building-6.png');">
-              </a>
-              <div class="text mt-3">
-                <div class="meta mb-2">
-                  <div><a href="#">December 2, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+            <div class="col-md-3 d-flex ftco-animate">
+              <div class="blog-entry align-self-stretch">
+                <a href="<?php echo web_root . 'index.php?q=hiring&search=' . $company->COMPANYNAME; ?>" class="block-20" style="background-image: url('https://pngriver.com/wp-content/uploads/2017/11/city-buildings-png-transparent-images-clipart-icons-pngriver-download-free-skyscraper-clipart-transparent-building-6.png');">
+                </a>
+                <div class="text mt-3">
+                  <div class="meta mb-2">
+                    <div><a href="#">December 2, 2018</a></div>
+                    <div><a href="#">Admin</a></div>
+                    <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  </div>
+                  <h3 class="heading"><a href="<?php echo web_root . 'index.php?q=hiring&search=' . $company->COMPANYNAME; ?>"><?php echo $company->COMPANYNAME;  ?></a></h3>
+                  <p>Address :<?php echo $company->COMPANYADDRESS; ?></p>
+                  <p>Contact No. :<?php echo $company->COMPANYCONTACTNO; ?></p>
                 </div>
-                <h3 class="heading"><a href="<?php echo web_root.'index.php?q=hiring&search='.$company->COMPANYNAME; ?>"><?php echo $company->COMPANYNAME;  ?></a></h3>
-                <p>Address :<?php echo $company->COMPANYADDRESS;?></p>
-                            <p>Contact No. :<?php echo $company->COMPANYCONTACTNO;?></p>
               </div>
             </div>
-          </div> 
 
- <?php } ?>
-          </div>
+          <?php } ?>
         </div>
-<!--         <div class="row mt-5">
+      </div>
+      <!--         <div class="row mt-5">
           <div class="col text-center">
             <div class="block-27">
               <ul>
@@ -61,4 +61,3 @@
         </div> -->
       </div>
     </section>
-   

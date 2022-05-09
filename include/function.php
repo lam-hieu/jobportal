@@ -1,7 +1,6 @@
 <?php
 function strip_zeros_from_date($marked_string = "")
 {
-	//first remove the marked zeros
 	$no_zeros = str_replace('*0', '', $marked_string);
 	$cleaned_string = str_replace('*0', '', $no_zeros);
 	return $cleaned_string;
@@ -49,47 +48,44 @@ spl_autoload_register(function ($class_name) {
 
 function currentpage_public()
 {
-	$this_page = $_SERVER['SCRIPT_NAME']; // will return /path/to/file.php
+	$this_page = $_SERVER['SCRIPT_NAME'];
 	$bits = explode('/', $this_page);
-	$this_page = $bits[count($bits) - 1]; // will return file.php, with parameters if case, like file.php?id=2
-	$this_script = $bits[0]; // will return file.php, no parameters*/
+	$this_page = $bits[count($bits) - 1];
+	$this_script = $bits[0];
 	return $bits[2];
 }
 
 function currentpage_admin()
 {
-	$this_page = $_SERVER['SCRIPT_NAME']; // will return /path/to/file.php
+	$this_page = $_SERVER['SCRIPT_NAME'];
 	$bits = explode('/', $this_page);
-	$this_page = $bits[count($bits) - 1]; // will return file.php, with parameters if case, like file.php?id=2
-	$this_script = $bits[0]; // will return file.php, no parameters*/
+	$this_page = $bits[count($bits) - 1];
+	$this_script = $bits[0];
 	return $bits[4];
 }
-// echo "string " .currentpage_admin()."<br/>";
 
 function curPageName()
 {
 	return substr($_SERVER['REQUEST_URI'], 21, strrpos($_SERVER['REQUEST_URI'], '/') - 24);
 }
 
-// echo "The current page name is ".curPageName();
 
 function currentpage()
 {
-	$this_page = $_SERVER['SCRIPT_NAME']; // will return /path/to/file.php
+	$this_page = $_SERVER['SCRIPT_NAME'];
 	$bits = explode('/', $this_page);
-	$this_page = $bits[count($bits) - 1]; // will return file.php, with parameters if case, like file.php?id=2
-	$this_script = $bits[0]; // will return file.php, no parameters*/
+	$this_page = $bits[count($bits) - 1];
+	$this_script = $bits[0];
 	return $bits[3];
 }
 function publiccurrentpage()
 {
-	$this_page = $_SERVER['SCRIPT_NAME']; // will return /path/to/file.php
+	$this_page = $_SERVER['SCRIPT_NAME'];
 	$bits = explode('/', $this_page);
-	$this_page = $bits[count($bits) - 1]; // will return file.php, with parameters if case, like file.php?id=2
-	$this_script = $bits[0]; // will return file.php, no parameters*/
+	$this_page = $bits[count($bits) - 1];
+	$this_script = $bits[0];
 	return $bits[2];
 }
-// echo publiccurrentpage();
 function msgBox($msg = "")
 {
 ?>

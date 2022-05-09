@@ -1,8 +1,3 @@
-// Button variants
-//
-// Easily pump out default styles, as well as :hover, :focus, :active,
-// and disabled options for all buttons
-
 .button-variant(@color; @background; @border) {
   color: @color;
   background-color: @background;
@@ -14,14 +9,16 @@
     background-color: darken(@background, 10%);
     border-color: darken(@border, 25%);
   }
+
   &:hover {
     color: @color;
     background-color: darken(@background, 10%);
     border-color: darken(@border, 12%);
   }
+
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open>.dropdown-toggle& {
     color: @color;
     background-color: darken(@background, 10%);
     border-color: darken(@border, 12%);
@@ -34,14 +31,17 @@
       border-color: darken(@border, 25%);
     }
   }
+
   &:active,
   &.active,
-  .open > .dropdown-toggle& {
+  .open>.dropdown-toggle& {
     background-image: none;
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
+
     &,
     &:hover,
     &:focus,

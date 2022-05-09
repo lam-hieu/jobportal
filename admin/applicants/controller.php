@@ -93,8 +93,6 @@ switch ($action) {
 					$emp->TELNO				= $_POST['TELNO'];
 					$emp->CIVILSTATUS		= $_POST['CIVILSTATUS']; 
 					$emp->POSITION			= trim($_POST['POSITION']);
-					// $emp->DEPARTMENTID		= $_POST['DEPARTMENTID'];
-					// $emp->DIVISIONID		= $_POST['DIVISIONID'];
 					$emp->EMP_EMAILADDRESS	= $_POST['EMP_EMAILADDRESS'];
 					$emp->EMPUSERNAME		= $_POST['EMPLOYEEID'];
 					$emp->EMPPASSWORD		= sha1($_POST['EMPLOYEEID']);
@@ -154,8 +152,6 @@ switch ($action) {
 					$emp->TELNO				= $_POST['TELNO'];
 					$emp->CIVILSTATUS		= $_POST['CIVILSTATUS']; 
 					$emp->POSITION			= trim($_POST['POSITION']);
-					// $emp->DEPARTMENTID		= $_POST['DEPARTMENTID'];
-					// $emp->DIVISIONID		= $_POST['DIVISIONID'];
 					$emp->EMP_EMAILADDRESS		= $_POST['EMP_EMAILADDRESS'];
 					$emp->EMPUSERNAME		= $_POST['EMPLOYEEID'];
 					$emp->EMPPASSWORD		= sha1($_POST['EMPLOYEEID']);
@@ -166,7 +162,6 @@ switch ($action) {
  
 
 				message("Employee has been updated!", "success");
-				// redirect("index.php?view=view&id=".$_POST['EMPLOYEEID']);
 		       redirect("index.php?view=edit&id=".$_POST['EMPLOYEEID']);
 	    	}
 
@@ -237,7 +232,7 @@ switch ($action) {
 				message("Uploaded file is not an image!", "error");
 				redirect("index.php?view=view&id=". $_GET['id']);
 			}else{
-					//uploading the file
+					//uploading new file
 					move_uploaded_file($temp,"photo/" . $myfile);
 		 	
 					 
@@ -255,7 +250,7 @@ switch ($action) {
 function doApproved(){
 global $mydb;
 	if (isset($_POST['submit'])) {
-		# code...
+		
 		$id = $_POST['JOBREGID'];
 		$applicantid = $_POST['APPLICANTID'];
 
@@ -265,12 +260,12 @@ global $mydb;
 		$cur = $mydb->executeQuery();
 
 		if ($cur) {
-			# code...
+
 			$sql = "SELECT * FROM `tblfeedback` WHERE `REGISTRATIONID`='{$id}'";
 			$mydb->setQuery($sql);
 			$res = $mydb->loadSingleResult();
 			if (isset($res)) {
-				# code...
+
 				$sql="UPDATE `tblfeedback` SET `FEEDBACK`='{$remarks}' WHERE `REGISTRATIONID`='{$id}'";
 				$mydb->setQuery($sql);
 				$cur = $mydb->executeQuery();
@@ -287,10 +282,5 @@ global $mydb;
 			message("cannot be sve.", "error");
 			redirect("index.php?view=view&id=".$id); 
 		}
-
-
 	}
 }
-
- 
-?>

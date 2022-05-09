@@ -70,4 +70,3 @@ switch ($view) {
 		$content ='home.php';		
 }
 require_once("theme/templates.php");
-?>

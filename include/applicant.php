@@ -60,8 +60,6 @@ class Applicants {
 		 }
 	}
 
-	 
-	/*---Instantiation of Object dynamically---*/
 	static function instantiate($record) {
 		$object = new self;
 
@@ -73,16 +71,11 @@ class Applicants {
 		return $object;
 	}
 	
-	
-	/*--Cleaning the raw data before submitting to Database--*/
 	private function has_attribute($attribute) {
-	  // We don't care about the value, we just want to know if the key exists
-	  // Will return true or false
 	  return array_key_exists($attribute, $this->attributes());
 	}
 
 	protected function attributes() { 
-		// return an array of attribute names and their values
 	  global $mydb;
 	  $attributes = array();
 	  foreach($this->dbfields() as $field) {
@@ -96,27 +89,19 @@ class Applicants {
 	protected function sanitized_attributes() {
 	  global $mydb;
 	  $clean_attributes = array();
-	  // sanitize the values before submitting
-	  // Note: does not alter the actual value of each attribute
 	  foreach($this->attributes() as $key => $value){
 	    $clean_attributes[$key] = $mydb->escape_value($value);
 	  }
 	  return $clean_attributes;
 	}
 	
-	
-	/*--Create,Update and Delete methods--*/
 	public function save() {
-	  // A new record won't have an id yet.
 	  return isset($this->id) ? $this->update() : $this->create();
 	}
 	
 	public function create() {
 		global $mydb;
-		// Don't forget your SQL syntax and good habits:
-		// - INSERT INTO table (key, key) VALUES ('value', 'value')
-		// - single-quotes around all values
-		// - escape all values to prevent SQL injection
+		// ngăn sql Injection
 		$attributes = $this->sanitized_attributes();
 		$sql = "INSERT INTO ".self::$tblname." (";
 		$sql .= join(", ", array_keys($attributes));
@@ -175,4 +160,3 @@ class Applicants {
 
 
 }
-?>

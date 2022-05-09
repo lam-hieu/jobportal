@@ -27,4 +27,3 @@ else
   {
   echo "Invalid file";
   }
-?>

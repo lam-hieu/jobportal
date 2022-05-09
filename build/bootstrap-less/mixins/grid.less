@@ -1,8 +1,4 @@
-// Grid system
-//
-// Generate semantic grid columns with these mixins.
-
-// Centered container element
+// Grid
 .container-fixed(@gutter: @grid-gutter-width) {
   margin-right: auto;
   margin-left: auto;
@@ -11,14 +7,12 @@
   &:extend(.clearfix all);
 }
 
-// Creates a wrapper for a series of columns
 .make-row(@gutter: @grid-gutter-width) {
   margin-left: ceil((@gutter / -2));
   margin-right: floor((@gutter / -2));
   &:extend(.clearfix all);
 }
 
-// Generate the extra small columns
 .make-xs-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   float: left;
@@ -40,7 +34,6 @@
   right: percentage((@columns / @grid-columns));
 }
 
-// Generate the small columns
 .make-sm-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -71,7 +64,6 @@
   }
 }
 
-// Generate the medium columns
 .make-md-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;
@@ -102,7 +94,6 @@
   }
 }
 
-// Generate the large columns
 .make-lg-column(@columns; @gutter: @grid-gutter-width) {
   position: relative;
   min-height: 1px;

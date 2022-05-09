@@ -1,46 +1,48 @@
 <?php session_start(); ?>
 <?php
-$cover=0;
-$id = $_REQUEST['id'];mysql_connect('localhost','root','') or die(mysql_error());mysql_select_db('naukri2jobs');$result = mysql_query("select * from rw_both WHERE exp_id=$id") or die(mysql_error());
+$cover = 0;
+$id = $_REQUEST['id'];
+mysql_connect('localhost', 'root', '') or die(mysql_error());
+mysql_select_db('naukri2jobs');
+$result = mysql_query("select * from rw_both WHERE exp_id=$id") or die(mysql_error());
 $amount = array();
-while($data = mysql_fetch_array($result))
-{
+while ($data = mysql_fetch_array($result)) {
 	$amount[] = $data;
 }
 ?>
 <?php
-    	if($id != '-1')
-    	{
-			foreach($amount as $am)
-    		{
-    			$amount=$am[2];
-    			$cover=$am[3];
-    			$_SESSION['COVER']=$cover;
-    			$fd1=$am[4];
-    			$fd2=$am[5];
-    			$_SESSION['FD1']=$fd1;
-    			$_SESSION['FD2']=$fd2;
-    			$_SESSION['AMOUNT']=$amount;
-    			$pr=$am[6];
-    			$service_name=$am[7];
-				$_SESSION['SERVICE']=$service_name;
-    		}    		echo"<div id='tot_amount1' style='color:white'>$amount</div>";
+if ($id != '-1') {
+	foreach ($amount as $am) {
+		$amount = $am[2];
+		$cover = $am[3];
+		$_SESSION['COVER'] = $cover;
+		$fd1 = $am[4];
+		$fd2 = $am[5];
+		$_SESSION['FD1'] = $fd1;
+		$_SESSION['FD2'] = $fd2;
+		$_SESSION['AMOUNT'] = $amount;
+		$pr = $am[6];
+		$service_name = $am[7];
+		$_SESSION['SERVICE'] = $service_name;
+	}
+	echo "<div id='tot_amount1' style='color:white'>$amount</div>";
 
-			echo"<table bgcolor='#ffffff' align='center' height='auto' width='230px'>
+	echo "<table bgcolor='#ffffff' align='center' height='auto' width='230px'>
 			<tr><td ><hr /></td></tr>
 			<tr><td align='center'><font size=4 color='black'><strong>Total Amount</strong></font></td></tr>
 			<tr><td align=center><font size=6 color='red'>
 			<strong id='tot_amount' >";
-					echo"Rs. $amount";
+	echo "Rs. $amount";
 
-			echo"</strong></td></tr>
-			<tr><td align='center' style='font-size:15px;'>"; $_SESSION['AMOUNT']=$amount;
-				echo"<input onclick='reval();'type='checkbox' name='cover' value='$cover'  id='check1' >
+	echo "</strong></td></tr>
+			<tr><td align='center' style='font-size:15px;'>";
+	$_SESSION['AMOUNT'] = $amount;
+	echo "<input onclick='reval();'type='checkbox' name='cover' value='$cover'  id='check1' >
 				Including Coverletter<font color='red'>(Rs.<strong id='cover_amt' >$cover</strong>)</font></td>
 				
 				
 				<tr><td ><hr /></td></tr>";
-				echo"
+	echo "
 				<html>
 				<head>
 				<script src='jquery-1.10.2.min.js'></script>
@@ -113,7 +115,7 @@ while($data = mysql_fetch_array($result))
 						</form>
 						</body>
 						</html></td></tr>";
-						 echo"<tr><td><font size=3 color='gray' face='arial'><b>Add Ons</b></font></td></tr>
+	echo "<tr><td><font size=3 color='gray' face='arial'><b>Add Ons</b></font></td></tr>
 						<tr><td>
 						<input onclick='reval3();' type='checkbox' name='v2' value='$pr' id='check2'  />
 
@@ -122,5 +124,5 @@ while($data = mysql_fetch_array($result))
 						<tr><td align='center'><input type='submit' name='groth_pack' value='Buy Now'style='color:#FFFFFF; margin-left:20px;font-family:Arial, Helvetica, sans-serif; background-color:#1014C2; border-radius:10px 10px 10px 10px; width:120px; height:40px; font-size:14px;'/></td><tr>
 						<tr><td><hr /></td></tr>
 					</table>";
-   	}
- ?>
+}
+?>

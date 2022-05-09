@@ -254,7 +254,4 @@ function UploadImage($jobid=0){
 			// redirect(web_root."index.php?q=apply&job=".$jobid."&view=personalinfo");
 			// exit;
 		}
-} 
-
-
-?>
+}

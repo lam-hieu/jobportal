@@ -1,15 +1,15 @@
-/*
- * Component: Form
- * ---------------
- */
+// Component: Form
+
 .form-control {
   .border-radius(@input-radius);
   box-shadow: none;
   border-color: @gray;
+
   &:focus {
     border-color: @light-blue;
     box-shadow: none;
   }
+
   &::-moz-placeholder,
   &:-ms-input-placeholder,
   &::-webkit-input-placeholder {
@@ -29,6 +29,7 @@
     label {
       color: @green;
     }
+
     .form-control {
       border-color: @green;
       box-shadow: none;
@@ -39,6 +40,7 @@
     label {
       color: @yellow;
     }
+
     .form-control {
       border-color: @yellow;
       box-shadow: none;
@@ -49,6 +51,7 @@
     label {
       color: @red;
     }
+
     .form-control {
       border-color: @red;
       box-shadow: none;
@@ -68,29 +71,30 @@
 /* button groups */
 .btn-group-vertical {
   .btn {
-    &.btn-flat:first-of-type, &.btn-flat:last-of-type {
+
+    &.btn-flat:first-of-type,
+    &.btn-flat:last-of-type {
       .border-radius(0);
     }
   }
 }
 
-.icheck > label {
+.icheck>label {
   padding-left: 0;
 }
 
-/* support Font Awesome icons in form-control */
 .form-control-feedback.fa {
   line-height: @input-height-base;
 }
 
-.input-lg + .form-control-feedback.fa,
-.input-group-lg + .form-control-feedback.fa,
-.form-group-lg .form-control + .form-control-feedback.fa {
+.input-lg+.form-control-feedback.fa,
+.input-group-lg+.form-control-feedback.fa,
+.form-group-lg .form-control+.form-control-feedback.fa {
   line-height: @input-height-large;
 }
 
-.input-sm + .form-control-feedback.fa,
-.input-group-sm + .form-control-feedback.fa,
-.form-group-sm .form-control + .form-control-feedback.fa {
+.input-sm+.form-control-feedback.fa,
+.input-group-sm+.form-control-feedback.fa,
+.form-group-sm .form-control+.form-control-feedback.fa {
   line-height: @input-height-small;
 }

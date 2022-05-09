@@ -1,7 +1,5 @@
-/*
- * Component: modal
- * ----------------
- */
+//Component: modal
+
 .modal {
   background: rgba(0, 0, 0, .3);
 }
@@ -10,6 +8,7 @@
   .border-radius(0);
   .box-shadow(0 2px 3px rgba(0, 0, 0, .125));
   border: 0;
+
   @media (min-width: @screen-sm-min) {
     .box-shadow(0 2px 3px rgba(0, 0, 0, .125));
   }
@@ -28,6 +27,7 @@
   .modal-body {
     &:extend(.bg-light-blue);
   }
+
   .modal-header,
   .modal-footer {
     &:extend(.bg-light-blue-active);
@@ -39,6 +39,7 @@
   .modal-body {
     &:extend(.bg-yellow);
   }
+
   .modal-header,
   .modal-footer {
     &:extend(.bg-yellow-active);
@@ -50,6 +51,7 @@
   .modal-body {
     &:extend(.bg-aqua);
   }
+
   .modal-header,
   .modal-footer {
     &:extend(.bg-aqua-active);
@@ -61,6 +63,7 @@
   .modal-body {
     &:extend(.bg-green);
   }
+
   .modal-header,
   .modal-footer {
     &:extend(.bg-green-active);
@@ -72,6 +75,7 @@
   .modal-body {
     &:extend(.bg-red);
   }
+
   .modal-header,
   .modal-footer {
     &:extend(.bg-red-active);
