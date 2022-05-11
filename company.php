@@ -1,5 +1,5 @@
-    <div class="hero-wrap js-fullheight" style="background-color: #0BE0FD">
-      <div class="overlay"></div>
+    <div class="hero-wrap js-fullheight">
+      <div class="overlay" style="background-color: #1B191A"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
@@ -12,7 +12,7 @@
 
 
 
-    <section class="ftco-section" style="background-color: #0BE0FD">
+    <section class="ftco-section" style="background-color: #FFF; opacity: 0;">
       <div class="container">
         <div class="row d-flex">
 

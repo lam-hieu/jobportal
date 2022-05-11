@@ -1,4 +1,4 @@
-   <div class="hero-wrap js-fullheight" style="background-color: #0BE0FD">
+   <div class="hero-wrap js-fullheight" style="background-color: #221F20">
      <div class="overlay"></div>
      <div class="container">
        <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">

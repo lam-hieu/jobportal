@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>JobPortal</title>
+  <title>IT-Jobs</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -63,7 +63,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-      <a class="navbar-brand" href="<?php echo web_root; ?>">Job Portal</a>
+      <a class="navbar-brand" href="<?php echo web_root; ?>">IT-Jobs</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="oi oi-menu"></span> Menu
       </button>
@@ -129,7 +129,7 @@
 
 
 
-  <section class="ftco-section-parallax">
+  <section class="ftco-section-parallax" style="background-color: #222831">
     <div class="parallax-img d-flex align-items-center">
       <div class="container">
         <div class="row d-flex justify-content-center">
@@ -152,7 +152,7 @@
     </div>
   </section>
 
-  <footer class="ftco-footer ftco-section" style="background-color: #0BE0FD">
+  <footer class="ftco-footer ftco-section">
     <div class="container">
       <div class="row mb-5">
         <div class="col-md">
@@ -199,7 +199,7 @@
               <ul>
                 <li><span class="icon icon-map-marker"></span><span class="text">Brgy. Enclaro Binalbagan, Negros Occidental Philippines</span></li>
                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+639272777334</span></a></li>
-                <li><a href="itsourcecode.com"><span class="icon icon-envelope"></span><span class="text">itsourcecode.com</span></a></li>
+                <li><a href="itjobs.com"><span class="icon icon-envelope"></span><span class="text">itjobs.com</span></a></li>
               </ul>
             </div>
           </div>
@@ -209,11 +209,9 @@
         <div class="col-md-12 text-center">
 
           <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;<script>
               document.write(new Date().getFullYear());
-            </script> All rights reserved
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </script> All members of Team 5
           </p>
         </div>
       </div>

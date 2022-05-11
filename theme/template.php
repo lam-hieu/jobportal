@@ -62,7 +62,7 @@
          <div class="container">
            <div class="row">
              <div class="col-md-12">
-               <p class="pull-left hidden-xs"><i class="fa fa-phone"></i>Tel No. (+001) 123-456-789</p>
+               <p class="pull-left hidden-xs"><i class="fa fa-phone"></i>Tel No. (+84) 123-456-789</p>
                <?php if (isset($_SESSION['APPLICANTID'])) {
 
                   $sql = "SELECT count(*) as 'COUNTNOTIF' FROM `tbljob` ORDER BY `DATEPOSTED` DESC";
@@ -225,12 +225,11 @@
                <h5 class="widgetheading">Our Contact</h5>
                <address>
                  <strong>Our Company</strong><br>
-                 JC Main Road, Near Silnile tower<br>
-                 Pin-21542 NewYork US.
+                 Ho Chi Minh City University of Transport
                </address>
                <p>
-                 <i class="icon-phone"></i> (123) 456-789 - 1255-12584 <br>
-                 <i class="icon-envelope-alt"></i> jannopalacios@gmail.com
+                 <i class="icon-phone"></i> (+84) 456-789-101112 <br>
+                 <i class="icon-envelope-alt"></i> itjobs@gmail.com
                </p>
              </div>
            </div>
@@ -263,7 +262,7 @@
                </ul>
              </div>
            </div>
-           <!--       <div class="col-md-3 col-sm-3">
+           <!--<div class="col-md-3 col-sm-3">
         <div class="widget">
           <h5 class="widgetheading">Recent News</h5>
           <ul class="link-list">
@@ -281,7 +280,7 @@
              <div class="col-lg-6">
                <div class="copyright">
                  <p>
-                   <span>&copy; Janno Palacios 2018 All right reserved.
+                   <span>&copy; UTH 2018 All right reserved.
                  </p>
                </div>
              </div>

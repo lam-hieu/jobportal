@@ -10,7 +10,7 @@
 
        </div>
 
-       <!-- <form action="process.php?action=login" enctype="multipart/form-data" method="post"> -->
+
        <div class="modal-body hold-transition login-page">
          <div id="loginerrormessage"></div>
          <div class="login-box">

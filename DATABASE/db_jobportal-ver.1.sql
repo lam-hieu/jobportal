@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 12, 2022 lúc 01:31 AM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.1
+-- Host: 127.0.0.1
+-- Generation Time: Apr 10, 2021 at 05:39 PM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `db_jobportal`
+-- Database: `db_jobportal`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblapplicants`
+-- Table structure for table `tblapplicants`
 --
 
 CREATE TABLE `tblapplicants` (
@@ -48,7 +48,7 @@ CREATE TABLE `tblapplicants` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblapplicants`
+-- Dumping data for table `tblapplicants`
 --
 
 INSERT INTO `tblapplicants` (`APPLICANTID`, `FNAME`, `LNAME`, `MNAME`, `ADDRESS`, `SEX`, `CIVILSTATUS`, `BIRTHDATE`, `BIRTHPLACE`, `AGE`, `USERNAME`, `PASS`, `EMAILADDRESS`, `CONTACTNO`, `DEGREE`, `APPLICANTPHOTO`, `NATIONALID`) VALUES
@@ -59,7 +59,7 @@ INSERT INTO `tblapplicants` (`APPLICANTID`, `FNAME`, `LNAME`, `MNAME`, `ADDRESS`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblattachmentfile`
+-- Table structure for table `tblattachmentfile`
 --
 
 CREATE TABLE `tblattachmentfile` (
@@ -71,7 +71,7 @@ CREATE TABLE `tblattachmentfile` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblattachmentfile`
+-- Dumping data for table `tblattachmentfile`
 --
 
 INSERT INTO `tblattachmentfile` (`FILEID`, `JOBID`, `FILE_NAME`, `FILE_LOCATION`, `USERATTACHMENTID`) VALUES
@@ -81,7 +81,7 @@ INSERT INTO `tblattachmentfile` (`FILEID`, `JOBID`, `FILE_NAME`, `FILE_LOCATION`
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblautonumbers`
+-- Table structure for table `tblautonumbers`
 --
 
 CREATE TABLE `tblautonumbers` (
@@ -93,19 +93,19 @@ CREATE TABLE `tblautonumbers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblautonumbers`
+-- Dumping data for table `tblautonumbers`
 --
 
 INSERT INTO `tblautonumbers` (`AUTOID`, `AUTOSTART`, `AUTOEND`, `AUTOINC`, `AUTOKEY`) VALUES
-(1, '02983', 10, 1, 'userid'),
-(2, '000', 80, 1, 'employeeid'),
+(1, '02983', 8, 1, 'userid'),
+(2, '000', 79, 1, 'employeeid'),
 (3, '0', 21, 1, 'APPLICANT'),
 (4, '0000', 2, 1, 'FILEID');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblcategory`
+-- Table structure for table `tblcategory`
 --
 
 CREATE TABLE `tblcategory` (
@@ -114,26 +114,27 @@ CREATE TABLE `tblcategory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblcategory`
+-- Dumping data for table `tblcategory`
 --
 
 INSERT INTO `tblcategory` (`CATEGORYID`, `CATEGORY`) VALUES
+(10, 'Technology'),
+(11, 'Managerial'),
 (12, 'Engineer'),
 (13, 'IT'),
+(14, 'Civil Engineer'),
 (15, 'HR'),
 (23, 'Sales'),
+(24, 'Banking'),
 (25, 'Finance'),
+(26, 'BPO'),
 (27, 'Degital Marketing'),
-(29, 'Front end Developer'),
-(30, 'Backend Developer'),
-(31, 'PHP Developer'),
-(32, 'Javascript Developer'),
-(33, 'Tester');
+(28, 'Shipping');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblcompany`
+-- Table structure for table `tblcompany`
 --
 
 CREATE TABLE `tblcompany` (
@@ -146,25 +147,20 @@ CREATE TABLE `tblcompany` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblcompany`
+-- Dumping data for table `tblcompany`
 --
 
 INSERT INTO `tblcompany` (`COMPANYID`, `COMPANYNAME`, `COMPANYADDRESS`, `COMPANYCONTACTNO`, `COMPANYSTATUS`, `COMPANYMISSION`) VALUES
-(8, 'TopCV', '263 Phan Xich Long, F2, Phu Nhuan District, Ho Chi Minh City', '0123456789', '', ''),
-(9, 'ITViec', 'Ho Chi Minh City', '977 460 519', '', ''),
-(10, 'TMA Solution', 'Quang Trung Software Park', '01234454554', '', ''),
-(11, 'FPT Software', 'Ho Chi Minh City', '563463454', '', ''),
-(12, 'VietNamWorks', 'Ho Chi Minh City', '2342343243', '', ''),
-(13, 'IT Company', 'Ho Chi Minh City', '42433423434', '', ''),
-(14, 'Glints', 'Hoan Kiem, Ha Noi', '412321213', '', ''),
-(15, 'Glints', 'Ho Chi Minh City', '135454544', '', ''),
-(16, 'CareerBuilder', 'Ho Chi Minh City', '13232321', '', ''),
-(17, 'CareerBuilder', 'Ha Noi', '31212444', '', '');
+(2, 'URC', 'Bry Camugao', '023654', '', 'weqwe'),
+(3, 'Copreros', 'Mabinay\'s', '035656', '', ''),
+(4, 'Quest', 'Kabankalan City', '23165', '', ''),
+(6, 'Palacios Company', 'Kabankalan City', '0625656899', '', ''),
+(7, 'IT Company', 'Kabankalan City', '04564123', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblemployees`
+-- Table structure for table `tblemployees`
 --
 
 CREATE TABLE `tblemployees` (
@@ -192,17 +188,16 @@ CREATE TABLE `tblemployees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblemployees`
+-- Dumping data for table `tblemployees`
 --
 
 INSERT INTO `tblemployees` (`INCID`, `EMPLOYEEID`, `FNAME`, `LNAME`, `MNAME`, `ADDRESS`, `BIRTHDATE`, `BIRTHPLACE`, `AGE`, `SEX`, `CIVILSTATUS`, `TELNO`, `EMP_EMAILADDRESS`, `CELLNO`, `POSITION`, `WORKSTATS`, `EMPPHOTO`, `EMPUSERNAME`, `EMPPASSWORD`, `DATEHIRED`, `COMPANYID`) VALUES
-(76, '2018001', 'Chambe', 'Narciso', 'Captain', 'mabinay', '1992-01-23', 'Mabinay', 26, 'Male', 'Married', '032656', 'chambe@yahoo.com', '', 'Fuel Tender', '', '', '2018001', 'f3593fd40c55c33d1788309d4137e82f5eab0dea', '2018-05-23', 2),
-(77, '392', 'Lam', 'Hieu', 'Trung', '123', '2000-11-06', 'ABC', 21, 'Male', 'Single', '123', '123@gmail.com', '', '123', '', '', '392', '0715d58c74869d445849a688c0f3804892a5d6a1', '1950-01-07', 7);
+(76, '2018001', 'Chambe', 'Narciso', 'Captain', 'mabinay', '1992-01-23', 'Mabinay', 26, 'Male', 'Married', '032656', 'chambe@yahoo.com', '', 'Fuel Tender', '', '', '2018001', 'f3593fd40c55c33d1788309d4137e82f5eab0dea', '2018-05-23', 2);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblfeedback`
+-- Table structure for table `tblfeedback`
 --
 
 CREATE TABLE `tblfeedback` (
@@ -215,7 +210,7 @@ CREATE TABLE `tblfeedback` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbljob`
+-- Table structure for table `tbljob`
 --
 
 CREATE TABLE `tbljob` (
@@ -235,7 +230,7 @@ CREATE TABLE `tbljob` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tbljob`
+-- Dumping data for table `tbljob`
 --
 
 INSERT INTO `tbljob` (`JOBID`, `COMPANYID`, `CATEGORY`, `OCCUPATIONTITLE`, `REQ_NO_EMPLOYEES`, `SALARIES`, `DURATION_EMPLOYEMENT`, `QUALIFICATION_WORKEXPERIENCE`, `JOBDESCRIPTION`, `PREFEREDSEX`, `SECTOR_VACANCY`, `JOBSTATUS`, `DATEPOSTED`) VALUES
@@ -245,7 +240,7 @@ INSERT INTO `tbljob` (`JOBID`, `COMPANYID`, `CATEGORY`, `OCCUPATIONTITLE`, `REQ_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tbljobregistration`
+-- Table structure for table `tbljobregistration`
 --
 
 CREATE TABLE `tbljobregistration` (
@@ -265,7 +260,7 @@ CREATE TABLE `tbljobregistration` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tblusers`
+-- Table structure for table `tblusers`
 --
 
 CREATE TABLE `tblusers` (
@@ -278,132 +273,132 @@ CREATE TABLE `tblusers` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tblusers`
+-- Dumping data for table `tblusers`
 --
 
 INSERT INTO `tblusers` (`USERID`, `FULLNAME`, `USERNAME`, `PASS`, `ROLE`, `PICLOCATION`) VALUES
-('00018', 'Lam Hieu', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Administrator', 'photos/user2-160x160.jpg'),
-('029839', 'Hieu', 'Hieu', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'Administrator', '');
+('00018', 'Jude Suarez', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Administrator', 'photos/077db70b-ab84-46c4-bbaa-a5dd6b7332a4_200x200.png'),
+('2018001', 'Chambe Narciso', 'Narciso', 'f3593fd40c55c33d1788309d4137e82f5eab0dea', 'Employee', '');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `tblapplicants`
+-- Indexes for table `tblapplicants`
 --
 ALTER TABLE `tblapplicants`
   ADD PRIMARY KEY (`APPLICANTID`);
 
 --
--- Chỉ mục cho bảng `tblattachmentfile`
+-- Indexes for table `tblattachmentfile`
 --
 ALTER TABLE `tblattachmentfile`
   ADD PRIMARY KEY (`FILEID`);
 
 --
--- Chỉ mục cho bảng `tblautonumbers`
+-- Indexes for table `tblautonumbers`
 --
 ALTER TABLE `tblautonumbers`
   ADD PRIMARY KEY (`AUTOID`);
 
 --
--- Chỉ mục cho bảng `tblcategory`
+-- Indexes for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
   ADD PRIMARY KEY (`CATEGORYID`);
 
 --
--- Chỉ mục cho bảng `tblcompany`
+-- Indexes for table `tblcompany`
 --
 ALTER TABLE `tblcompany`
   ADD PRIMARY KEY (`COMPANYID`);
 
 --
--- Chỉ mục cho bảng `tblemployees`
+-- Indexes for table `tblemployees`
 --
 ALTER TABLE `tblemployees`
   ADD PRIMARY KEY (`INCID`),
   ADD UNIQUE KEY `EMPLOYEEID` (`EMPLOYEEID`);
 
 --
--- Chỉ mục cho bảng `tblfeedback`
+-- Indexes for table `tblfeedback`
 --
 ALTER TABLE `tblfeedback`
   ADD PRIMARY KEY (`FEEDBACKID`);
 
 --
--- Chỉ mục cho bảng `tbljob`
+-- Indexes for table `tbljob`
 --
 ALTER TABLE `tbljob`
   ADD PRIMARY KEY (`JOBID`);
 
 --
--- Chỉ mục cho bảng `tbljobregistration`
+-- Indexes for table `tbljobregistration`
 --
 ALTER TABLE `tbljobregistration`
   ADD PRIMARY KEY (`REGISTRATIONID`);
 
 --
--- Chỉ mục cho bảng `tblusers`
+-- Indexes for table `tblusers`
 --
 ALTER TABLE `tblusers`
   ADD PRIMARY KEY (`USERID`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `tblapplicants`
+-- AUTO_INCREMENT for table `tblapplicants`
 --
 ALTER TABLE `tblapplicants`
   MODIFY `APPLICANTID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2019021;
 
 --
--- AUTO_INCREMENT cho bảng `tblattachmentfile`
+-- AUTO_INCREMENT for table `tblattachmentfile`
 --
 ALTER TABLE `tblattachmentfile`
   MODIFY `FILEID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2147483648;
 
 --
--- AUTO_INCREMENT cho bảng `tblautonumbers`
+-- AUTO_INCREMENT for table `tblautonumbers`
 --
 ALTER TABLE `tblautonumbers`
   MODIFY `AUTOID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT cho bảng `tblcategory`
+-- AUTO_INCREMENT for table `tblcategory`
 --
 ALTER TABLE `tblcategory`
-  MODIFY `CATEGORYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `CATEGORYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- AUTO_INCREMENT cho bảng `tblcompany`
+-- AUTO_INCREMENT for table `tblcompany`
 --
 ALTER TABLE `tblcompany`
-  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT cho bảng `tblemployees`
+-- AUTO_INCREMENT for table `tblemployees`
 --
 ALTER TABLE `tblemployees`
-  MODIFY `INCID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `INCID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
--- AUTO_INCREMENT cho bảng `tblfeedback`
+-- AUTO_INCREMENT for table `tblfeedback`
 --
 ALTER TABLE `tblfeedback`
   MODIFY `FEEDBACKID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `tbljob`
+-- AUTO_INCREMENT for table `tbljob`
 --
 ALTER TABLE `tbljob`
   MODIFY `JOBID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT cho bảng `tbljobregistration`
+-- AUTO_INCREMENT for table `tbljobregistration`
 --
 ALTER TABLE `tbljobregistration`
   MODIFY `REGISTRATIONID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;

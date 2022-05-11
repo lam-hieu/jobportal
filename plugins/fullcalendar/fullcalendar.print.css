@@ -1,15 +1,3 @@
-/*!
- * FullCalendar v2.2.5 Print Stylesheet
- * Docs & License: http://arshaw.com/fullcalendar/
- * (c) 2013 Adam Shaw
- */
-
-/*
- * Include this stylesheet on your page to get a more printer-friendly calendar.
- * When including this stylesheet, use the media='print' attribute of the <link> tag.
- * Make sure to include this stylesheet IN ADDITION to the regular fullcalendar.css.
- */
-
 .fc {
 	max-width: 100% !important;
 }
@@ -52,17 +40,23 @@ tbody,
 
 /* don't force a min-height on rows (for DayGrid) */
 .fc tbody .fc-row {
-	height: auto !important; /* undo height that JS set in distributeHeight */
-	min-height: 0 !important; /* undo the min-height from each view's specific stylesheet */
+	height: auto !important;
+	/* undo height that JS set in distributeHeight */
+	min-height: 0 !important;
+	/* undo the min-height from each view's specific stylesheet */
 }
 
 .fc tbody .fc-row .fc-content-skeleton {
-	position: static; /* undo .fc-rigid */
-	padding-bottom: 0 !important; /* use a more border-friendly method for this... */
+	position: static;
+	/* undo .fc-rigid */
+	padding-bottom: 0 !important;
+	/* use a more border-friendly method for this... */
 }
 
-.fc tbody .fc-row .fc-content-skeleton tbody tr:last-child td { /* only works in newer browsers */
-	padding-bottom: 1em; /* ...gives space within the skeleton. also ensures min height in a way */
+.fc tbody .fc-row .fc-content-skeleton tbody tr:last-child td {
+	/* only works in newer browsers */
+	padding-bottom: 1em;
+	/* ...gives space within the skeleton. also ensures min height in a way */
 }
 
 .fc tbody .fc-row .fc-content-skeleton table {
@@ -89,7 +83,8 @@ tbody,
 }
 
 .fc-popover {
-	display: none; /* never display the "more.." popover in print mode */
+	display: none;
+	/* never display the "more.." popover in print mode */
 }
 
 
@@ -108,8 +103,10 @@ tbody,
 
 /* don't display the horizontal lines */
 .fc-slats,
-.fc-time-grid hr { /* this hr is used when height is underused and needs to be filled */
-	display: none !important; /* important overrides inline declaration */
+.fc-time-grid hr {
+	/* this hr is used when height is underused and needs to be filled */
+	display: none !important;
+	/* important overrides inline declaration */
 }
 
 /* let the container that holds the events be naturally positioned and create real height */
@@ -180,8 +177,10 @@ tbody,
 
 /* kill the scrollbars and allow natural height */
 .fc-scroller,
-.fc-day-grid-container,    /* these divs might be assigned height, which we need to cleared */
-.fc-time-grid-container {  /* */
+.fc-day-grid-container,
+/* these divs might be assigned height, which we need to cleared */
+.fc-time-grid-container {
+	/* */
 	overflow: visible !important;
 	height: auto !important;
 }
@@ -198,5 +197,6 @@ tbody,
 
 .fc-button-group,
 .fc button {
-	display: none; /* don't display any button-related controls */
+	display: none;
+	/* don't display any button-related controls */
 }
