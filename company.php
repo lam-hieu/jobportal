@@ -12,7 +12,7 @@
 
 
 
-    <section class="ftco-section" style="background-color: #FFF; opacity: 0;">
+    <section class="ftco-section" style="background-color: #000; opacity: 0;">
       <div class="container">
         <div class="row d-flex">
 
