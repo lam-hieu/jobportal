@@ -197,8 +197,8 @@
             <h2 class="ftco-heading-2">Have a Questions?</h2>
             <div class="block-23 mb-3">
               <ul>
-                <li><span class="icon icon-map-marker"></span><span class="text">Brgy. Enclaro Binalbagan, Negros Occidental Philippines</span></li>
-                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+639272777334</span></a></li>
+                <li><span class="icon icon-map-marker"></span><span class="text">Ho Chi Minh City University Of Transport - UTH</span></li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+840123456789</span></a></li>
                 <li><a href="itjobs.com"><span class="icon icon-envelope"></span><span class="text">itjobs.com</span></a></li>
               </ul>
             </div>

@@ -14,6 +14,8 @@ class Database
 	function __construct()
 	{
 		$this->open_connection();
+		$this->magic_quotes_active;
+		//$this->magic_quotes_active = get_magic_quotes_gpc();
 		$this->real_escape_string_exists = function_exists("mysql_real_escape_string");
 	}
 
