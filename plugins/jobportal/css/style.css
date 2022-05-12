@@ -11850,6 +11850,8 @@ textarea.form-control {
   height: 250px;
   position: relative;
   display: block;
+  justify-content: center ;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
