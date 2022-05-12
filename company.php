@@ -12,7 +12,7 @@
 
 
 
-    <section class="ftco-section" style="background-color: #FFF; opacity: 0;">
+    <section class="ftco-section" style="background-color: #fff; ">
       <div class="container">
         <div class="row d-flex">
 
@@ -26,8 +26,8 @@
 
             <div class="col-md-3 d-flex ftco-animate">
               <div class="blog-entry align-self-stretch">
-                <a href="<?php echo web_root . 'index.php?q=hiring&search=' . $company->COMPANYNAME; ?>" class="block-20" style="background-image: url('https://pngriver.com/wp-content/uploads/2017/11/city-buildings-png-transparent-images-clipart-icons-pngriver-download-free-skyscraper-clipart-transparent-building-6.png');">
-                </a>
+                <a href="<?php echo web_root . 'index.php?q=hiring&search=' . $company->COMPANYNAME; ?>" class="block-20"  style="background-size: 150px 150px; background-image: url('images/<?php echo $company->Image_company; ?>');">
+              </a>
                 <div class="text mt-3">
                   <div class="meta mb-2">
                     <div><a href="#">December 2, 2018</a></div>

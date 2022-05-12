@@ -10,7 +10,7 @@
   </div>
 </div>
 
-<section class="ftco-section" style="background-color: #0BE0FD">
+<section class="ftco-section" style="background-color: #FFF">
   <div class="container">
 
     <div class="row">
