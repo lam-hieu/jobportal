@@ -19,6 +19,7 @@
       if (isset($_GET['search'])) {
         # code...
         $COMPANYNAME = $_GET['search'];
+        
       } else {
         $COMPANYNAME = '';
       }
@@ -30,9 +31,6 @@
       foreach ($cur as $result) {
 
       ?>
-
-
-
         <div class="col-md-12 ftco-animate">
 
           <div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">

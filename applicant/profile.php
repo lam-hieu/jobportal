@@ -44,7 +44,7 @@
            <div class="panel panel-default">            
             <div class="panel-body"> 
               <div  id="image-container">
-                <img title="profile image"  data-target="#myModal"  data-toggle="modal"  src="">  
+                <img title="profile image"  data-target="#myModal"  data-toggle="modal"  src = "<?php echo $applicant->APPLICANTPHOTO ?>">
               </div>
              </div>
           <ul class="list-group"> 

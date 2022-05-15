@@ -179,42 +179,41 @@ $searchfor = (isset($_GET['searchfor']) && $_GET['searchfor'] != '') ? $_GET['se
 		</div>
 	</div>
 	<div class="table-container">
-		<table class="table table-filter">
-			<tbody>
-				<?php
+		<div class="container">
+<div class="row">
+						<table class="table table-filter">
+					<tbody>
+						<?php
 
-				$search = isset($_POST['SEARCH']) ? $_POST['SEARCH'] : '';
-				$company = isset($_POST['COMPANY']) ? $_POST['COMPANY'] : '';
-				$category = isset($_POST['CATEGORY']) ? $_POST['CATEGORY'] : '';
+						$search = isset($_POST['SEARCH']) ? $_POST['SEARCH'] : '';
+						$company = isset($_POST['COMPANY']) ? $_POST['COMPANY'] : '';
+						$category = isset($_POST['CATEGORY']) ? $_POST['CATEGORY'] : '';
 
-				$sql = "SELECT * FROM `tbljob` j, `tblcompany` c 
-										WHERE j.`COMPANYID`=c.`COMPANYID` AND COMPANYNAME LIKE '%{$company}%' AND CATEGORY LIKE '%{$category}%' AND (`OCCUPATIONTITLE` LIKE '%{$search}%' OR `JOBDESCRIPTION` LIKE '%{$search}%' OR `QUALIFICATION_WORKEXPERIENCE` LIKE '%{$search}%')";
-				$mydb->setQuery($sql);
-				$cur = $mydb->executeQuery();
-				$maxrow = $mydb->num_rows($cur);
+						$sql = "SELECT * FROM `tbljob` j, `tblcompany` c 
+												WHERE j.`COMPANYID`=c.`COMPANYID` AND COMPANYNAME LIKE '%{$company}%' AND CATEGORY LIKE '%{$category}%' AND (`OCCUPATIONTITLE` LIKE '%{$search}%' OR `JOBDESCRIPTION` LIKE '%{$search}%' OR `QUALIFICATION_WORKEXPERIENCE` LIKE '%{$search}%')";
+						$mydb->setQuery($sql);
+						$cur = $mydb->executeQuery();
+						$maxrow = $mydb->num_rows($cur);
 
-				if ($maxrow > 0) {
+						if ($maxrow > 0) {
 
-					$res = $mydb->loadResultList();
-					foreach ($res as $row) {
-				?>
+							$res = $mydb->loadResultList();
+							foreach ($res as $row) {
+						?>
+							<div class="col-md-12 ftco-animate">
 
-
-
-						<div class="col-md-12 ftco-animate">
-
-							<div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
+								<div class="job-post-item bg-white p-4 d-block d-md-flex align-items-center">
 
 								<div class="mb-4 mb-md-0 mr-5">
 									<div class="job-post-item-header d-flex align-items-center">
-										<h2 class="mr-3 text-black h3"><?php echo $row->OCCUPATIONTITLE ?></h2>
-										<div class="badge-wrap">
-											<span class="bg-primary text-white badge py-2 px-3"><?php echo $row->CATEGORY ?></span>
-										</div>
+									<h2 class="mr-3 text-black h3"><?php echo $row->OCCUPATIONTITLE ?></h2>
+									<div class="badge-wrap">
+										<span class="bg-primary text-white badge py-2 px-3"><?php echo $row->CATEGORY ?></span>
+									</div>
 									</div>
 									<div class="job-post-item-body d-block d-md-flex">
-										<div class="mr-3"><span class="icon-layers"></span> <a href="#"><?php echo $row->COMPANYNAME ?></a></div>
-										<div><span class="icon-my_location"></span> <span><?php echo $row->COMPANYADDRESS ?></span></div>
+									<div class="mr-3"><span class="icon-layers"></span> <a href="#"><?php echo $row->COMPANYNAME ?></a></div>
+									<div><span class="icon-my_location"></span> <span><?php echo $row->COMPANYADDRESS ?></span></div>
 									</div>
 								</div>
 
@@ -222,16 +221,18 @@ $searchfor = (isset($_GET['searchfor']) && $_GET['searchfor'] != '') ? $_GET['se
 									<a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $row->JOBID; ?>&view=personalinfo" class="btn btn-primary py-2 mr-1">Apply Job</a>
 
 								</div>
-							</div>
-						</div><!-- end -->
+								</div>
+								</div><!-- end -->
+						<?php }
+						} else {
+							echo '<tr><td>No result found!.....</td></tr>';
+						} ?>
 
-
-
-				<?php }
-				} else {
-					echo '<tr><td>No result found!.....</td></tr>';
-				} ?>
-
-
+					</tbody>
+				</table>
+			</div>
+		</div>
+			
+		
 	</div>
 </section>

@@ -11,9 +11,9 @@
 </div>
 
 <?php
-if (isset($_GET['search'])) {
+if (isset($_GET['SEARCH'])) {
 
-  $jobid = $_GET['search'];
+  $jobid = $_GET['SEARCH'];
 } else {
   $jobid = '';
 }
