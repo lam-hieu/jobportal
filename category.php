@@ -3,9 +3,9 @@
 
 
         <?php
-        if (isset($_GET['search'])) {
+        if (isset($_GET['SEARCH'])) {
             # code...
-            $category = $_GET['search'];
+            $category = $_GET['SEARCH'];
         } else {
             $category = '';
         }
@@ -19,12 +19,15 @@
 
             <div class="panel panel-primary">
                 <div class="panel-header">
-                    <div style="border-bottom: 1px solid #ddd;padding: 10px;font-size: 20px;font-weight: bold;color: #000;margin-bottom: 5px;"><a href="<?php echo web_root . 'index.php?q=viewjob&search=' . $result->JOBID; ?>"><?php echo $result->OCCUPATIONTITLE; ?></a>
+                    <div style="border-bottom: 1px solid #ddd;padding: 10px;font-size: 20px;font-weight: bold;color: #000;margin-bottom: 5px;">
+                        <a href="<?php echo web_root . 'index.php?q=viewjob&search=' . $_GET['JOBID'] ?>">
+                            <?php echo $result->OCCUPATIONTITLE; ?>
+                        </a>
                     </div>
                 </div>
                 <div class="panel-body contentbody">
                     <div class="col-sm-10">
-                        <!--           <div class="col-sm-6">
+                         <div class="col-sm-6">
                             <ul>
                                 <li><i class="fp-ht-bed"></i>Required No. of Employee's : <?php echo $result->REQ_NO_EMPLOYEES; ?></li>
                                 <li><i class="fp-ht-food"></i>Salary : <?php echo number_format($result->SALARIES, 2);  ?></li>
@@ -36,7 +39,7 @@
                                 <li><i class="fp-ht-tv"></i>Prefered Sex : <?php echo $result->PREFEREDSEX; ?></li>
                                 <li><i class="fp-ht-computer"></i>Sector of Vacancy : <?php echo $result->SECTOR_VACANCY; ?></li>
                             </ul>
-                        </div> -->
+                        </div> 
                         <div class="col-sm-12">
                             <p>Qualification/Work Experience :</p>
                             <ul style="list-style: none;">

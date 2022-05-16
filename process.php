@@ -26,7 +26,7 @@ function doSubmitApplication() {
 		$fileid = $autonum->set_autonumber('FILEID');
 
 		@$picture = UploadImage();
-		@$location = "photos/". $picture ;
+		@$location = "applicant/photos/". $picture ;
 
 
 		if ($picture=="") {
@@ -240,8 +240,7 @@ function UploadImage($jobid=0){
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 	
 	
-	if($imageFileType != "jpg" || $imageFileType != "png" || $imageFileType != "jpeg"
-|| $imageFileType != "gif" ) {
+	if($imageFileType != "jpg" || $imageFileType != "png" || $imageFileType != "jpeg" || $imageFileType != "gif" ) {
 		 if (move_uploaded_file($_FILES["picture"]["tmp_name"], $target_file)) {
 			return  date("dmYhis") . basename($_FILES["picture"]["name"]);
 		}else{

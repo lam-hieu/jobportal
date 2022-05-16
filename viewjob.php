@@ -2,9 +2,9 @@
     <div class="container content">
 
         <?php
-        if (isset($_GET['search'])) {
+        if (isset($_GET['SEARCH'])) {
             # code...
-            $jobid = $_GET['search'];
+            $jobid = $_GET['SEARCH'];
         } else {
             $jobid = '';
         }
@@ -61,7 +61,7 @@
                                             <p>Employer : <?php echo  $result->COMPANYNAME; ?></p>
                                             <p>Location : <?php echo  $result->COMPANYADDRESS; ?></p>
                                         </div>
-                                    </div>
+                                    </div>                              
                                     <a href="<?php echo web_root; ?>index.php?q=apply&job=<?php echo $result->JOBID; ?>&view=personalinfo" class="btn btn-main btn-next-tab">Apply Now !</a>
                                 </div>
                             </div>
@@ -69,8 +69,6 @@
                     </div>
                 </div>
             </div>
-
-
         <?php  } ?>
     </div>
 </section>
