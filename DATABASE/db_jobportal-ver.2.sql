@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 12, 2022 lúc 10:37 AM
--- Phiên bản máy phục vụ: 10.4.20-MariaDB
--- Phiên bản PHP: 8.0.8
+-- Thời gian đã tạo: Th5 12, 2022 lúc 01:31 AM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -142,28 +142,24 @@ CREATE TABLE `tblcompany` (
   `COMPANYADDRESS` varchar(90) NOT NULL,
   `COMPANYCONTACTNO` varchar(30) NOT NULL,
   `COMPANYSTATUS` varchar(90) NOT NULL,
-  `COMPANYMISSION` text NOT NULL,
-  `Image_company` varchar(255) DEFAULT NULL
+  `COMPANYMISSION` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Đang đổ dữ liệu cho bảng `tblcompany`
 --
 
-INSERT INTO `tblcompany` (`COMPANYID`, `COMPANYNAME`, `COMPANYADDRESS`, `COMPANYCONTACTNO`, `COMPANYSTATUS`, `COMPANYMISSION`, `Image_company`) VALUES
-(8, 'TopCV', '263 Phan Xich Long, F2, Phu Nhuan District, Ho Chi Minh City', '0123456789', '', '', 'topCV.jpg'),
-(9, 'ITViec', 'Ho Chi Minh City', '977 460 519', '', '', 'itviec.jpg'),
-(10, 'TMA Solution', 'Quang Trung Software Park', '01234454554', '', '', 'Tma.png'),
-(11, 'FPT Software', 'Ho Chi Minh City', '563463454', '', '', 'logo-fpt.jpg'),
-(12, 'VietNamWorks', 'Ho Chi Minh City', '2342343243', '', '', 'y7hokh2f_400x400.png'),
-(13, 'IT Company', 'Ho Chi Minh City', '42433423434', '', '', '1566897859035.jpg'),
-(14, 'Glints', 'Hoan Kiem, Ha Noi', '412321213', '', '', 'glints.png'),
-(15, 'Glints', 'Ho Chi Minh City', '135454544', '', '', 'glints.png'),
-(16, 'CareerBuilder', 'Ho Chi Minh City', '13232321', '', '', 'cb-small.png'),
-(17, 'CareerBuilder', 'Ha Noi', '31212444', '', '', 'cb-small.png'),
-(18, 'Fossil', 'Ho Chi Minh City', '02343453452', '', '', 'Fossil.png'),
-(19, 'TNG Holdings Vietnam', 'Ho Chi Minh City,Ha Noi City', '5234534534', '', '', 'TNG.png'),
-(20, 'Ngân Hàng Á Châu | ACB', 'Ho Chi Minh City', '42564566546', '', '', 'ACB.png');
+INSERT INTO `tblcompany` (`COMPANYID`, `COMPANYNAME`, `COMPANYADDRESS`, `COMPANYCONTACTNO`, `COMPANYSTATUS`, `COMPANYMISSION`) VALUES
+(8, 'TopCV', '263 Phan Xich Long, F2, Phu Nhuan District, Ho Chi Minh City', '0123456789', '', ''),
+(9, 'ITViec', 'Ho Chi Minh City', '977 460 519', '', ''),
+(10, 'TMA Solution', 'Quang Trung Software Park', '01234454554', '', ''),
+(11, 'FPT Software', 'Ho Chi Minh City', '563463454', '', ''),
+(12, 'VietNamWorks', 'Ho Chi Minh City', '2342343243', '', ''),
+(13, 'IT Company', 'Ho Chi Minh City', '42433423434', '', ''),
+(14, 'Glints', 'Hoan Kiem, Ha Noi', '412321213', '', ''),
+(15, 'Glints', 'Ho Chi Minh City', '135454544', '', ''),
+(16, 'CareerBuilder', 'Ho Chi Minh City', '13232321', '', ''),
+(17, 'CareerBuilder', 'Ha Noi', '31212444', '', '');
 
 -- --------------------------------------------------------
 
@@ -386,7 +382,7 @@ ALTER TABLE `tblcategory`
 -- AUTO_INCREMENT cho bảng `tblcompany`
 --
 ALTER TABLE `tblcompany`
-  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `COMPANYID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT cho bảng `tblemployees`
